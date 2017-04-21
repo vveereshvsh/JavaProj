@@ -35,4 +35,64 @@
        <url>http://104.154.199.201:8081/repository/mymaven-releases/</url>
       </repository>
   </distributionManagement>
+
+ <profiles>
+        <profile>
+            <id>build-docker</id>
+            <build>
+                <plugins>
+
+                    <plugin>
+                        <groupId>io.fabric8</groupId>
+                        <artifactId>docker-maven-plugin</artifactId>
+                        <version>0.18.1</version>
+                        <configuration>
+                            <images>
+                                <image>
+                                    <name>vveereshvsh/veeresh</name>
+                                    <alias>WebAppContainer</alias>
+                                    <!-- Configure build settings -->
+                                    <build>
+                                        <dockerFileDir>/var/lib/jenkins/workspace/dev_proj_WebApp_v01</dockerFileDir>
+                                        <assembly>
+                                            <inline>
+                                                <fileSets>
+                                                    <fileSet>
+                                                        <directory>/var/lib/jenkins/workspace/dev_proj_WebApp_v01/target</directory>
+                                                        <outputDirectory>.</outputDirectory>
+                                                        <includes>
+                                                            <include>*.war</include>
+                                                        </includes>
+                                                    </fileSet>
+                                                </fileSets>
+                                            </inline>
+                                        </assembly>
+                                    </build>
+                                </image>
+                            </images>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>docker:build</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>build</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>docker:push</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>push</goal>
+                                </goals>
+                            </execution>
+
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+
 </project>
