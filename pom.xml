@@ -18,23 +18,7 @@
   <build>
     <finalName>WebApplication</finalName>
   </build>
-<!--  <repositories>
-    <repository>
-     <id>mymaven-group</id>
-     <url>http://104.154.199.201:8081/repository/mymaven-group/</url>
-    </repository>
-  </repositories>
-  <distributionManagement>
-     <snapshotRepository>
-      <id>mymaven-snapshots</id>
-      <url>http://104.154.199.201:8081/repository/mymaven-snapshots/</url>
-     </snapshotRepository>
 
-      <repository>                                                    
-       <id>mymaven-releases</id>
-       <url>http://104.154.199.201:8081/repository/mymaven-releases/</url>
-      </repository>
-  </distributionManagement> --->
  <profiles>
         <profile>
             <id>build-docker</id>
