@@ -38,7 +38,7 @@
 --->
  <profiles>
         <profile>
-            <id>build-docker</id>
+            <id>build-docker_</id>
             <build>
                 <plugins>
 
