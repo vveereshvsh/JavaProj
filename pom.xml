@@ -21,7 +21,7 @@
 
  <profiles>
         <profile>
-            <id>build-docker_</id>
+            <id>build-docker-test</id>
             <build>
                 <plugins>
 
