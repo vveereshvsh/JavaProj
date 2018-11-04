@@ -27,7 +27,7 @@
  <snapshotRepository>
   <id>nexus-deploy</id>
   <name>Internal nexus</name>
-  <url>http://35.193.230.91:8080/repository/maven-snapshots/</url>
+  <url>http://35.193.230.91:8080/repository/mysnapshot/</url>
  </snapshotRepository>
 </distributionManagement>
  <profiles>
