@@ -29,6 +29,7 @@
   <name>Internal nexus</name>
   <url>http://35.193.230.91:8080/repository/mymaven-Release/</url>
  </repository>
+</distributionManagement>
  <profiles>
         <profile>
             <id>build-docker</id>
