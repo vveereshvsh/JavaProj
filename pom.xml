@@ -23,7 +23,13 @@
   <build>
     <finalName>WebApplication</finalName>
   </build>
-
+<distributionManagement>
+ <snapshotRepository>
+  <id>nexus-deploy</id>
+  <name>Internal nexus</name>
+  <url>http://35.193.230.91:8080/repository/mysnapshot/</url>
+ </snapshotRepository>
+</distributionManagement>
  <profiles>
         <profile>
             <id>build-docker</id>
